@@ -1,0 +1,15 @@
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl a.mapboxgl-ctrl-logo {
+  display: none;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+.mapboxgl-popup {
+  max-width: none !important;
+}
+
+.mapboxgl-popup-content {
+  background-color: var(--mui-palette-background-default) !important;
+  background: var(--mui-palette-background-default) !important;
+}

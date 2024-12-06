@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  fulfillment_frontend:
+    container_name: fulfillment_frontend
+    image: fulfillment_frontend
+    restart: always
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
